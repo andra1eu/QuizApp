@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/elephant_layout"
+        style="@style/LayoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/frame"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/eleph" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/LayoutParent"
+                android:gravity="center"
+                android:text="@string/how_long_is_an_elephant_pregnant"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                style="@style/LayoutParent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:gravity="center">
+
+                <RadioButton
+                    android:id="@+id/eleph_1_button"
+                    style="@style/ChildSize"
+                    android:text="@string/_8_months" />
+
+                <RadioButton
+                    android:id="@+id/eleph_2_button"
+                    style="@style/ChildSize"
+                    android:tag="1"
+                    android:text="@string/_24_months" />
+
+                <RadioButton
+                    android:id="@+id/eleph_3_button"
+                    style="@style/ChildSize"
+                    android:text="@string/_18_months" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

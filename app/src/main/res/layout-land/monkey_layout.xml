@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/monkey_layout"
+        style="@style/LayoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/frame"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/monkey" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/LayoutParent"
+                android:gravity="center"
+                android:text="@string/what_do_monkeys_eat"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                style="@style/LayoutParent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:gravity="center">
+
+                <CheckBox
+                    android:id="@+id/monkey_1_button"
+                    style="@style/ChildSize"
+                    android:tag="1"
+                    android:text="@string/fruits" />
+
+                <CheckBox
+                    android:id="@+id/monkey_2_button"
+                    style="@style/ChildSize"
+                    android:text="@string/chocolate" />
+
+                <CheckBox
+                    android:id="@+id/monkey_3_button"
+                    style="@style/ChildSize"
+                    android:tag="1"
+                    android:text="@string/vegetables" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

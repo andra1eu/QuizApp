@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">AnimalQuizzApp</string>
+    <string name="what_are_young_wolves_called">What are young wolves called?</string>
+    <string name="_18_months">18 months</string>
+    <string name="_24_months">24 months</string>
+    <string name="_8_months">8 months</string>
+    <string name="how_long_is_an_elephant_pregnant">How long is an elephant pregnant?</string>
+    <string name="kits">kits</string>
+    <string name="cubs">cubs</string>
+    <string name="pups">pups</string>
+    <string name="what_is_the_most_popular_purebred_cat_breed">What is the most popular purebred cat breed?</string>
+    <string name="abyssinian">Abyssinian</string>
+    <string name="siamese">Siamese</string>
+    <string name="persian">Persian</string>
+    <string name="what_is_monkeys_favorite_food">What is monkeys favorite food?</string>
+    <string name="fruits">Fruits</string>
+    <string name="what_do_monkeys_eat">What do monkeys eat?</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="vegetables">Vegetables</string>
+    <string name="name_the_most_intelligent_family_of_birds_with_respect_to_reasoning_power">Name the most intelligent family of birds with respect to reasoning power?</string>
+    <string name="eagle">eagle</string>
+    <string name="crow">crow</string>
+    <string name="owl">owl</string>
+    <string name="submit_answer">Submit Answer</string>
+    <string name="send_us_your_thoughts">Send us your thoughts!</string>
+    <string name="leave_a_comment">Leave a comment!</string>
+    <string name="send">Send</string>
+</resources>

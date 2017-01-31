@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/monkey_layout"
+        style="@style/LayoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/frame"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            android:src="@drawable/monkey" />
+
+        <TextView
+            style="@style/LayoutParent"
+            android:gravity="center"
+            android:text="@string/what_do_monkeys_eat"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            style="@style/LayoutParent"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/monkey_1_button"
+                style="@style/ChildSize"
+                android:tag="1"
+                android:text="@string/fruits" />
+
+            <CheckBox
+                android:id="@+id/monkey_2_button"
+                style="@style/ChildSize"
+                android:text="@string/chocolate" />
+
+            <CheckBox
+                android:id="@+id/monkey_3_button"
+                style="@style/ChildSize"
+                android:tag="1"
+                android:text="@string/vegetables" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

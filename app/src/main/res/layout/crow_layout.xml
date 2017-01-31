@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/crow_layout"
+        style="@style/LayoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/frame"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            android:src="@drawable/crow" />
+
+        <TextView
+            style="@style/LayoutParent"
+            android:gravity="center"
+            android:text="@string/name_the_most_intelligent_family_of_birds_with_respect_to_reasoning_power"
+            android:textSize="18sp" />
+
+        <RadioGroup
+
+            style="@style/LayoutParent"
+            android:layout_margin="16dp">
+
+            <RadioButton
+                android:id="@+id/crow_1_button"
+                style="@style/ChildSize"
+                android:text="@string/eagle" />
+
+            <RadioButton
+                android:id="@+id/crow_2_button"
+                style="@style/ChildSize"
+                android:tag="1"
+                android:text="@string/crow" />
+
+            <RadioButton
+                android:id="@+id/crow_3_button"
+                style="@style/ChildSize"
+                android:text="@string/owl" />
+        </RadioGroup>
+    </LinearLayout>
+</FrameLayout>

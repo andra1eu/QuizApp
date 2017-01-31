@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cat_layout"
+        style="@style/LayoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/frame"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/cat" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/LayoutParent"
+                android:gravity="center"
+                android:text="@string/what_is_the_most_popular_purebred_cat_breed"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                style="@style/LayoutParent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:gravity="center">
+
+                <RadioButton
+                    android:id="@+id/cat_1_button"
+                    style="@style/ChildSize"
+                    android:text="@string/abyssinian" />
+
+                <RadioButton
+                    android:id="@+id/cat_2_button"
+                    style="@style/ChildSize"
+                    android:tag="1"
+                    android:text="@string/persian" />
+
+                <RadioButton
+                    android:id="@+id/cat_3_button"
+                    style="@style/ChildSize"
+                    android:text="@string/siamese" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

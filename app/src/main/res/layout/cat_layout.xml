@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cat_layout"
+        style="@style/LayoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/frame"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            android:src="@drawable/cat" />
+
+        <TextView
+            style="@style/LayoutParent"
+            android:gravity="center"
+            android:text="@string/what_is_the_most_popular_purebred_cat_breed"
+            android:textSize="18sp" />
+
+        <RadioGroup style="@style/LayoutParent">
+
+            <RadioButton
+                android:id="@+id/cat_1_button"
+                style="@style/ChildSize"
+                android:text="@string/abyssinian" />
+
+            <RadioButton
+                android:id="@+id/cat_2_button"
+                style="@style/ChildSize"
+                android:tag="1"
+                android:text="@string/persian" />
+
+            <RadioButton
+                android:id="@+id/cat_3_button"
+                style="@style/ChildSize"
+                android:text="@string/siamese" />
+        </RadioGroup>
+    </LinearLayout>
+</FrameLayout>

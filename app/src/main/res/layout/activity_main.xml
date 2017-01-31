@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.example.android.animalquizzapp.MainActivity">
+
+        <include
+            android:id="@+id/wolf_layout"
+            layout="@layout/layout_wolf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wolf_layout"
+            android:padding="16dp" />
+
+        <include
+            android:id="@+id/elephant_layout"
+            layout="@layout/elephant_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wolf_layout" />
+
+        <include
+            android:id="@+id/cat_layout"
+            layout="@layout/cat_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/elephant_layout" />
+
+        <include
+            android:id="@+id/monkey_layout"
+            layout="@layout/monkey_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cat_layout" />
+
+        <include
+            android:id="@+id/crow_layout"
+            layout="@layout/crow_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/monkey_layout" />
+
+        <Button
+           style="@style/Button"
+            android:layout_below="@id/crow_layout"
+            android:text="@string/submit_answer"
+            android:id="@+id/submit_answer"
+            android:onClick="submitAnswer"/>
+        <TextView
+            android:id="@+id/textViewAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/submit_answer"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewAnswer"
+            android:layout_marginTop="16dp"
+            android:hint="@string/leave_a_comment"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"/>
+        <Button
+            android:layout_below="@id/editText"
+            style="@style/Button"
+            android:id="@+id/sendMail"
+            android:onClick="sendMail"
+            android:text="@string/send"
+            android:layout_marginBottom="8dp"/>
+
+
+    </RelativeLayout>
+</ScrollView>
