@@ -1,20 +1,17 @@
 package com.example.android.animalquizzapp;
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
-import android.support.annotation.IdRes;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -55,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         TextView textView = (TextView) findViewById(R.id.textViewAnswer);
+        Toast.makeText(this, "You made " + score + " out of 25", Toast.LENGTH_SHORT).show();
         textView.setText("Each answer equals 5 point.\nYou made " + score + " out of 25");
         score = 0;
     }
