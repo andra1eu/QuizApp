@@ -1,6 +1,7 @@
 package com.example.android.animalquizzapp;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
 import android.support.annotation.IdRes;
@@ -45,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
             if (button.getTag() != null)
                 if (button.isChecked()) {
                     score += 5;
-                    if (button instanceof CheckBox) score -= 2.5;
+                    if (button instanceof CheckBox)
+                        score -= 2.5;
                     button.setBackgroundColor(Color.parseColor("#009000"));
                 } else {
                     button.setBackgroundColor(Color.parseColor("#900000"));
@@ -66,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         intent.setData(Uri.parse("mailto:andralung@gmail.com"));
         intent.putExtra(Intent.EXTRA_SUBJECT, "Regarding the quiz");
         intent.putExtra(Intent.EXTRA_TEXT, comment);
-
-        startActivity(intent);
+        if (!getPackageManager().queryIntentActivities(intent, 0).isEmpty())
+            startActivity(intent);
     }
 }
