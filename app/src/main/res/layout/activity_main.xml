@@ -45,10 +45,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/monkey_layout" />
+        <include
+            android:id="@+id/lizard_layout"
+            layout="@layout/lizard_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/crow_layout" />
+
 
         <Button
            style="@style/Button"
-            android:layout_below="@id/crow_layout"
+            android:layout_below="@id/lizard_layout"
             android:text="@string/submit_answer"
             android:id="@+id/submit_answer"
             android:onClick="submitAnswer"/>

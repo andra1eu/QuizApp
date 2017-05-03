@@ -25,4 +25,8 @@
     <string name="send_us_your_thoughts">Send us your thoughts!</string>
     <string name="leave_a_comment">Leave a comment!</string>
     <string name="send">Send</string>
+    <string name="what_does_a_lizzard_eat">What does a lizzard eat?</string>
+    <string name="lizard">What does a lizard eat?</string>
+    <string name="b_chocolate">B. Chocolate</string>
+    <string name="a_insects">A. Insects</string>
 </resources>

@@ -19,11 +19,16 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<CompoundButton> buttons = new ArrayList<>();
     private float score = 0;
+    String textEntry;
+    EditText textEntryAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        textEntryAnswer = (EditText) findViewById(R.id.lizard_answer);
+        textEntry = textEntryAnswer.getText().toString();
 
         setupButtons(R.id.wolf_1_button, R.id.wolf_2_button, R.id.wolf_3_button, R.id.eleph_1_button,
                 R.id.eleph_2_button, R.id.eleph_3_button, R.id.cat_1_button, R.id.cat_2_button,
@@ -39,6 +44,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitAnswer(View view) {
+        if (textEntry == "insects" && textEntry != null){
+            score += 5;
+            textEntryAnswer.setBackgroundColor(Color.parseColor("#009000"));
+        }else{
+            textEntryAnswer.setBackgroundColor(Color.parseColor("#900000"));
+        }
         for (CompoundButton button : buttons) {
             if (button.getTag() != null)
                 if (button.isChecked()) {
@@ -52,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         TextView textView = (TextView) findViewById(R.id.textViewAnswer);
-        Toast.makeText(this, "You made " + score + " out of 25", Toast.LENGTH_SHORT).show();
-        textView.setText("Each answer equals 5 point.\nYou made " + score + " out of 25");
+        Toast.makeText(this, "You made " + score + " out of 30", Toast.LENGTH_SHORT).show();
+        textView.setText("Each answer equals 5 point.\nYou made " + score + " out of 30");
         score = 0;
     }
 
