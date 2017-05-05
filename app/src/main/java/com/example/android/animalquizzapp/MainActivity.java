@@ -15,20 +15,22 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<CompoundButton> buttons = new ArrayList<>();
     private float score = 0;
-    String textEntry;
     EditText textEntryAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
         textEntryAnswer = (EditText) findViewById(R.id.lizard_answer);
-        textEntry = textEntryAnswer.getText().toString();
+
 
         setupButtons(R.id.wolf_1_button, R.id.wolf_2_button, R.id.wolf_3_button, R.id.eleph_1_button,
                 R.id.eleph_2_button, R.id.eleph_3_button, R.id.cat_1_button, R.id.cat_2_button,
@@ -37,17 +39,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setupButtons(@IdRes int... ids) {
-        for (int id : ids) {
-            CompoundButton cb = (CompoundButton) findViewById(id);
-            buttons.add(cb);
-        }
+        for (int id : ids) buttons.add((CompoundButton) ButterKnife.findById(this, id));
     }
 
     public void submitAnswer(View view) {
-        if (textEntry == "insects" && textEntry != null){
+        String textEntry = textEntryAnswer.getText().toString();
+        if (!textEntry.isEmpty() && textEntry.equalsIgnoreCase("insects")) {
             score += 5;
             textEntryAnswer.setBackgroundColor(Color.parseColor("#009000"));
-        }else{
+        } else {
             textEntryAnswer.setBackgroundColor(Color.parseColor("#900000"));
         }
         for (CompoundButton button : buttons) {
